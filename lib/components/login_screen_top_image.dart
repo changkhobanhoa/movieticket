@@ -3,8 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../constants.dart';
 
-class SignUpScreenTopImage extends StatelessWidget {
-  const SignUpScreenTopImage({
+class LoginScreenTopImage extends StatelessWidget {
+  const LoginScreenTopImage({
     Key? key,
   }) : super(key: key);
 
@@ -12,18 +12,17 @@ class SignUpScreenTopImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        
         Row(
           children: [
             const Spacer(),
             Expanded(
               flex: 8,
-              child: SvgPicture.asset("assets/icons/signup.svg"),
+              child: SvgPicture.asset("assets/icons/login.svg"),
             ),
             const Spacer(),
           ],
         ),
-        const SizedBox(height: defaultPadding),
+        const SizedBox(height: defaultPadding * 2),
       ],
     );
   }
