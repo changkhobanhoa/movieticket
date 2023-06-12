@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:report4/pages/login/login_page.dart';
+import 'package:report4/pages/splash/splash_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
      
         primarySwatch: Colors.blue,
       ),
-      home:   LoginPage(),
+      home:   SplashPage(),
     );
   }
 } 
