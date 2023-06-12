@@ -24,10 +24,9 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
     _animationController.dispose();
     super.dispose();
   }
-
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return Scaffold(
       backgroundColor: Colors.blue[400],
       body: Center(
