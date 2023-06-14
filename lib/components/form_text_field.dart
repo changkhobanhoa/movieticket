@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
+
 TextFormField formField(String text, IconData icon, bool isPassWord,
-    TextEditingController controller) {
+    Function error, TextEditingController controller) {
   return TextFormField(
     controller: controller,
     obscureText: isPassWord,
     enableSuggestions: isPassWord,
     autocorrect: isPassWord,
     keyboardType: TextInputType.emailAddress,
+    validator: (value) {
+      return error(value);
+    },
     textInputAction: TextInputAction.done,
     decoration: InputDecoration(
       labelText: text,
-      hintText: text,
       prefixIcon: Icon(icon),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10.0),
